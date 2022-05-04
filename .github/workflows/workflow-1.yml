@@ -8,7 +8,8 @@ jobs:
         run: 'echo "Hello World"'
 
       - name: 'Create file, write "Hello World" into it and show the contents of that file'
-        run: touch hello-world.txt
+        run: |
+          touch hello-world.txt
           echo "Hello World" >> hello-world.txt
           cat hello-world.txt
 
