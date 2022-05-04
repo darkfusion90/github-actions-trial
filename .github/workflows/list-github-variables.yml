@@ -1,0 +1,16 @@
+name: 'List github variables'
+on: [pull_request]
+
+jobs:
+  list-github-variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout to repo'
+        uses: actions/checkout@v3
+
+      - name: 'Show repo details'
+        run: |
+          echo ${{ github.repository }}
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
