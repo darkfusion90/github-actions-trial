@@ -1,0 +1,16 @@
+name: 'first-workflow'
+on: [push]
+jobs:
+  shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Echoing "Hello World"'
+        run: 'echo "Hello World"'
+
+      - name: 'Create file, write "Hello World" into it and show the contents of that file'
+        run: touch hello-world.txt
+          echo "Hello World" >> hello-world.txt
+          cat hello-world.txt
+
+      - name: 'Show files of repository'
+        run: ls -a
