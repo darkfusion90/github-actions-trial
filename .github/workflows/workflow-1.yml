@@ -2,7 +2,7 @@ name: 'first-workflow'
 on: [push]
 jobs:
   shell-commands:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: 'Echoing "Hello World"'
         run: 'echo "Hello World"'
